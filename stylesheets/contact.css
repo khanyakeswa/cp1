@@ -69,9 +69,8 @@ body {
 .section.header .menusvg .a {
   transform-origin: center;
   opacity: 1;
-  transition: all .25s;
+  transition: all 0.25s;
 }
-
 
 .section.header .menu.visible .menusvg .a {
   transform: rotateZ(0deg);
@@ -97,7 +96,6 @@ body {
   transform: rotateZ(-45deg);
 }
 
-
 .section.header .menu.visible {
   position: relative;
   display: flex;
@@ -108,8 +106,8 @@ body {
   border-radius: 2px;
   background-color: #0ba39c;
   z-index: 2;
-  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, .25);
-  transition: background-color .5s;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.5s;
   cursor: pointer;
 }
 
@@ -140,14 +138,19 @@ body {
   box-sizing: border-box;
   grid-template-rows: repeat(5, auto);
   grid-template-columns: 1fr;
-  border: .1px solid #fff;
-  background-color: rgba(11, 163, 156, .5);
+  border: 0.1px solid #fff;
+  background-color: rgba(11, 163, 156, 0.5);
   backdrop-filter: blur(5px);
   width: auto;
   height: fit-content;
   margin: 0;
   transform: translateY(-100%);
-  transition: all .5s;
+  transition: all 0.5s;
+}
+
+.section.header .menu.visible .navbar a:nth-child(5) {
+  background-color: #252525;
+  border: 0.1px solid #fff;
 }
 
 .section.header .menu.visible .navbar a {
@@ -158,137 +161,88 @@ body {
   padding: 15px 10px;
   border: 0px 0px 0.1px 0px solid #fff;
   background-color: unset;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .section.header .menu.visible .navbar a:hover {
   background-color: #252525;
   border: 0.1px solid #fff;
-}
-.section.splash {
-  position: relative;
-  width: 100%;
-  height: 370px;
-  /* background-color: burlywood; */
-  display: flex;
-  align-items: center;
+  color: #1fc3bc;
 }
 
-.section.splash .backdrop {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  filter: grayscale(100%);
-  background-image: url('https://images.pexels.com/photos/903039/pexels-photo-903039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-}
-
-.section.splash .text-container {
-  position: relative;
-  width: 490px;
-  left: 50%;
+.subheader {
+  display: inline;
   line-height: 1;
-}
-
-.section.splash h2 {
-  display: inline-block;
-  margin: 0 0 18px 0;
-  width: fit-content;
-  height: fit-content;
-  font-size: 20px;
-  grid-column: 2;
-  font-family: 'Poller One', Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  color: #000;
-  background-color: #fff;
-  padding: 23px 27px 20px;
-}
-.section.splash p {
-  display: inline-block;
-  margin: 7px 0;
-  width: fit-content;
-  height: fit-content;
-  font-size: 20px;
-  grid-column: 2;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  padding: 12px 27px;
-  background-color: #252525;
-}
-
-.section.splash .button {
-  display: block;
-  width: fit-content;
-  height: fit-content;
-  font-size: 16px;
-  margin-top: 15px;
-  padding: 26px 27px 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  background-color: #0ba39c;
-  cursor: pointer;
-}
-
-.section.splash .button:hover {
-  background-color: #1fc3bc;
-}
-
-.section.gallery {
-  width: auto;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.section.gallery .tile {
-  width: auto;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 10px 20px;
-}
-
-.section.gallery .tile .image {
-  min-width: 300px;
-  min-height: 240px;
-  box-sizing: border-box;
-  border: 2px solid #252525;
-  filter: opacity(0.85);
-  transition: filter 0.5s;
-  cursor: pointer;
-  background-size: cover;
-}
-
-.section.gallery .tile .image:hover {
-  filter: opacity(1);
-}
-
-.section.gallery .tile:nth-child(1) .image {
-  background-image: url('https://freewebsitetemplates.com/preview/mustacheenthusiast/images/the-father.jpg');
-}
-.section.gallery .tile:nth-child(2) .image {
-  background-image: url('https://freewebsitetemplates.com/preview/mustacheenthusiast/images/the-actor.jpg');
-}
-.section.gallery .tile:nth-child(3) .image {
-  background-image: url('https://freewebsitetemplates.com/preview/mustacheenthusiast/images/the-nerd.jpg');
-}
-
-.section.gallery .tile span {
-  width: 100%;
-  display: block;
-  font-size: 20px;
   font-family: 'Poller One', Arial, Helvetica, sans-serif;
+  font-size: 35px;
   font-weight: normal;
-  line-height: 1;
-  padding: 33px 0 0;
+  background-color: #252525;
+  color: #fff;
+  padding: 15px 28px 12px;
+  margin: 0;
+}
+
+.section.form {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 620px;
+}
+
+.form-container input {
+  border: 2px solid #252525;
+  color: #252525;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 0 37px;
+  padding: 20px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 596px;
+}
+
+.form-container textarea {
+  border: 2px solid #252525;
+  color: #252525;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 0 37px;
+  padding: 20px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 596px;
+  height: 175px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.form-container .send {
+  background: #252525;
+  color: #fff;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  display: inline-block;
+  padding: 20px 28px;
+  width: fit-content;
+  border: 2px solid #252525;
+  margin: 0 0 37px;
+  cursor: pointer;
+}
+
+.form-container .send:hover {
+  background-color: #fff;
+  color: #252525;
 }
 
 footer {
@@ -356,94 +310,44 @@ footer .social-media-container {
 }
 
 @media (max-width: 1000px) {
-  .section.splash {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .section.splash .backdrop {
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: 'FlipH';
-  }
-
-  .section.splash .text-container {
-    position: static;
-    float: right;
-    margin-left: 15px;
-    width: 490px;
-    line-height: 1;
-  }
-
-  .section.splash p {
-    text-align: center;
-  }
-
-  .section.gallery {
-    width: 100%;
-    overflow-x: scroll;
-  }
-
-  .section.gallery::-webkit-scrollbar {
-    display: none;
+  .section.gallery .tile-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 480px) {
-  .section.splash {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .section.splash .text-container {
-    position: relative;
+@media (max-width: 772px) {
+  .section.form {
+    width: 100%;
+  }
+  .form-container {
     width: auto;
-    line-height: 1;
-    left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-    text-align: center;
+    margin: 0px 30px;
+    left: 30px;
+    right: 30px;
   }
 
-  .section.splash .text-container h2 {
-    margin: 50px 0 10px;
-    padding: 8px 5px;
-  }
-  .section.splash .text-container p {
+  .form-container input {
     width: 100%;
-    padding: 8px 5px;
-    font-size: 14px;
+    margin: 0 0 20px;
+    padding: 10px;
   }
-  .section.splash .text-container .button {
-    padding: 14px 14px 14px;
-  }
-
-  .section.gallery {
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  .section.gallery .tile {
+  
+  .form-container textarea {
     width: 100%;
+    height: 175px;
+    resize: none;
+    overflow-y: auto;
+    margin: 0 0 20px;
+    padding: 10px;
   }
+  
+}
 
-  .section.gallery .tile .image {
-    width: 100%;
-    height: 100%;
-    padding-top: 80%;
-  }
-
-  .section.gallery .tile span {
-    padding-top: 20px;
+@media (max-width: 480px) {
+  .subheader {
+    font-size: 20px;
+    width: fit-content;
   }
 
   footer.home {
